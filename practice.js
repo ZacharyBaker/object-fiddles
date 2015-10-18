@@ -299,12 +299,38 @@ var MakePerson = function(name, birthday, ssn){
 
 
 
-/* As of this point you should have a MakePerson and a MakeCard function which returns you either a person or a credit card object.
-   Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
-   Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
+/* As of this point you should have a MakePerson and a MakeCard 
+function which returns you either a person or a credit card object.
+   Now, create a bindCard function that takes in a person object
+    as its first parameter and a creditcard object as its second parameter.
+   Have bindCard merge the two parameters together into a new object which
+    contains all the properties from the person as well as the creditcard.
 */
 
   //Code Here
+var bindCard = function(personObj, credObj){
+  var newPersonWithInfo = Object.assign(newPersonWithInfo, personObj, credObj);
+  
+}
+//----------------------------------------
+
+var newPersonWithInfo = {};
+
+var bindCard = function(personObj, credObj){
+  var newGuyWithInfo = {};
+  for (var x in personObj){
+      newGuyWithInfo[x] = personObj[x];//the first time i tried it i used three === instead and it did not work. Why not?????
+  }
+  for (var x in credObj){
+      newGuyWithInfo[x] = credObj[x];
+  }
+  return newGuyWithInfo;
+}
 
 
 
+var dude = {name:"dude"};
+var card = {company: "Visa"};
+
+
+bindCard(dude, card);

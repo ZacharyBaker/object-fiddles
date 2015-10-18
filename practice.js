@@ -265,10 +265,16 @@ methodCollection.logHello();
 
 
 
-// Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
+// Create a function called MakePerson which takes 
+//in name, birthday, ssn as its parameters and returns 
+//a new object with all of the information that you passed in.
 
   //Code Here
-
+var MakePerson = function(name, birthday, ssn){
+  this.name = name;
+  this.birthday = birthday;
+  this.ssn = ssn;
+}
 
 
 //NEXT PROBLEM

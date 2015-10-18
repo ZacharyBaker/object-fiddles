@@ -142,14 +142,26 @@ for (var x in album){
 
 
 
-//Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
+//Create an object called states that has 5 US states as properties
+// with the values being their population (doesn't have to be accurate).
 
   //Code Here
-
-//Now, loop through your states object and if the states population is greater than 30K, alert that state.
+var states = {
+  utah: 50000,
+  arizona: 400099,
+  alaska: 49485594,
+  maine: 1,
+  delaware: 2
+}
+//Now, loop through your states object and if the states 
+//population is greater than 30K, alert that state.
 
   //Code Here
-
+for (var x in states){
+  if (states[x] > 30000){
+    alert(x);
+  }
+}
 
 
 

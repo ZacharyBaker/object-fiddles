@@ -309,17 +309,24 @@ function which returns you either a person or a credit card object.
 
   //Code Here
 var bindCard = function(personObj, credObj){
-  var newPersonWithInfo = Object.assign(newPersonWithInfo, personObj, credObj);
-  
+  var newPersonWithInfo = Object.assign(personObj, credObj);
+  return newPersonWithInfo;
 }
+var dude = {name:"dude"};
+var card = {company: "Visa"};
+
+
+bindCard(dude, card);
+
+
 //----------------------------------------
 
-var newPersonWithInfo = {};
+
 
 var bindCard = function(personObj, credObj){
   var newGuyWithInfo = {};
   for (var x in personObj){
-      newGuyWithInfo[x] = personObj[x];//the first time i tried it i used three === instead and it did not work. Why not?????
+      newGuyWithInfo[x] = personObj[x];
   }
   for (var x in credObj){
       newGuyWithInfo[x] = credObj[x];
